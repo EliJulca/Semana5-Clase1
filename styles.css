@@ -1,0 +1,81 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "banner-1 banner-1"
+        "cards cards"
+        "banner-2 banner-2"
+        "gallery gallery"
+        "footer footer";
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+header {
+    grid-area: header;
+    background-color: coral;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.banner-1 {
+    grid-area: banner-1;
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-2 {
+    grid-area: banner-2;
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+}
+
+.cards {
+    grid-area: cards;
+    display: flex;
+    gap: 10px;
+}
+
+.card {
+    flex: 1;
+    background-color: lightgreen;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.img {
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    grid-area: footer;
+    background-color: darkgreen;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
